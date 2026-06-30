@@ -1,16 +1,349 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <title>L'Or Noir | ภัตตาคารหรูสไตล์เลิศรส</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURELIA - Fine Dining | ร้านอาหารหรูโทนสีดำ-ทอง</title>
+  <meta name="description" content="สัมผัสประสบการณ์ดินเนอร์สุดหรูระดับมิชลินสตาร์ที่ AURELIA ร้านอาหารพรีเมียมในบรรยากาศสีดำ-ทองเลอค่า">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar" id="navbar">
+      <a href="#home" class="logo">
+        AURELIA<span>.</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active">หน้าแรก</a></li>
+        <li><a href="#about" class="nav-link">เกี่ยวกับเรา</a></li>
+        <li><a href="#menu" class="nav-link">เมนูอาหาร</a></li>
+        <li><a href="#reservation" class="nav-link">สำรองโต๊ะ</a></li>
+        <li><a href="#contact" class="nav-link">ติดต่อ</a></li>
+      </ul>
+      <div class="burger" id="burger" aria-label="Toggle navigation">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="hero-subtitle">The Epitome of Fine Dining</p>
+        <h1 class="hero-title gold-text">AURELIA</h1>
+        <p class="hero-description">สัมผัสสุนทรียภาพแห่งการรับประทานอาหารระดับพรีเมียม ผสมผสานรสชาติอันเป็นเอกลักษณ์และศิลปะการรังสรรค์ในบรรยากาศสีดำ-ทองอันหรูหรา</p>
+        <div class="hero-buttons">
+          <a href="#reservation" class="gold-btn">จองโต๊ะอาหาร</a>
+          <a href="#menu" class="gold-btn">สำรวจเมนู</a>
+        </div>
+      </div>
+      <a href="#about" class="hero-scroll-btn">เลื่อนลงเพื่อดูเพิ่มเติม <i class="fa-solid fa-arrow-down"></i></a>
+    </section>
+
+    <!-- About Section -->
+    <section class="about id-reveal" id="about">
+      <div class="about-container reveal">
+        <div class="about-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1000&auto=format&fit=crop" alt="Aurelia Cuisine" class="about-img">
+          <div class="about-image-badge">
+            <p>EST.</p>
+            <p class="gold-text">2022</p>
+            <p style="font-size: 0.65rem; letter-spacing: 1px; color: var(--text-muted);">MICHELIN STAR</p>
+          </div>
+        </div>
+        <div class="about-content">
+          <h2 class="gold-text">เรื่องราวของเรา</h2>
+          <h3>ความสมบูรณ์แบบในทุกรายละเอียด</h3>
+          <p class="about-highlight">"อาหารไม่ได้เป็นเพียงแค่สิ่งที่รับประทาน แต่เป็นงานศิลปะและประสบการณ์ที่เรามอบให้"</p>
+          <p class="about-desc">ที่ AURELIA เราคัดสรรวัตถุดิบที่ดีที่สุดจากทั่วทุกมุมโลก ไม่ว่าจะเป็นเนื้อวากิวเกรดพรีเมียม ทรัฟเฟิลสดจากอิตาลี และอาหารทะเลสดใหม่ รังสรรค์โดยเชฟระดับมิชลินสตาร์ เพื่อให้ทุกคำที่ท่านรับประทานเป็นความทรงจำที่มิอาจลืมเลือน</p>
+          <div style="margin-top: 15px;">
+            <a href="#menu" class="gold-btn">ดูประวัติเชฟของเรา</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu-section id-reveal" id="menu">
+      <div class="menu-container">
+        <div class="section-title reveal">
+          <h2 class="gold-text">เมนูพิเศษแนะนำ</h2>
+          <p style="color: var(--text-muted); font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase;">Our Signature Selection</p>
+        </div>
+
+        <div class="menu-filters reveal">
+          <button class="filter-btn active" data-filter="all">ทั้งหมด</button>
+          <button class="filter-btn" data-filter="starter">อาหารเรียกน้ำย่อย</button>
+          <button class="filter-btn" data-filter="main">อาหารจานหลัก</button>
+          <button class="filter-btn" data-filter="dessert">ของหวาน</button>
+          <button class="filter-btn" data-filter="drink">เครื่องดื่มพิเศษ</button>
+        </div>
+
+        <div class="menu-grid reveal">
+          <!-- Item 1: Starter -->
+          <div class="menu-item glass-card" data-category="starter">
+            <div class="menu-item-header">
+              <span class="menu-item-title">Caviar & Gold Blinis</span>
+              <span class="menu-item-line"></span>
+              <span class="menu-item-price">฿1,850</span>
+            </div>
+            <p class="menu-item-desc">คาเวียร์ Beluga เกรดพรีเมียม เสิร์ฟคู่กับแพนเค้กสไตล์รัสเซียบลิ Nis ตกแต่งด้วยแผ่นทองคำเปลวบริสุทธิ์ 24K</p>
+            <div class="menu-item-tags">
+              <span class="menu-item-tag">Signature</span>
+              <span class="menu-item-tag">Premium</span>
+            </div>
+          </div>
+
+          <!-- Item 2: Starter -->
+          <div class="menu-item glass-card" data-category="starter">
+            <div class="menu-item-header">
+              <span class="menu-item-title">Truffle Scallop Carpaccio</span>
+              <span class="menu-item-line"></span>
+              <span class="menu-item-price">฿1,250</span>
+            </div>
+            <p class="menu-item-desc">หอยเชลล์ฮอกไกโดฝานบาง เสิร์ฟพร้อมน้ำมันทรัฟเฟิลสีขาว เลมอนสด และไข่ปลาแซลมอนสีส้มประกายทอง</p>
+            <div class="menu-item-tags">
+              <span class="menu-item-tag">Gluten Free</span>
+            </div>
+          </div>
+
+          <!-- Item 3: Main -->
+          <div class="menu-item glass-card" data-category="main">
+            <div class="menu-item-header">
+              <span class="menu-item-title">A5 Wagyu Striploin Rossini</span>
+              <span class="menu-item-line"></span>
+              <span class="menu-item-price">฿3,800</span>
+            </div>
+            <p class="menu-item-desc">เนื้อวัวโกเบ A5 ย่างเตาถ่าน เสิร์ฟคู่กับฟัวกราส์ย่างกระทะ ราดด้วยซอสไวน์แดง Madeira และทรัฟเฟิลดำฝานสด</p>
+            <div class="menu-item-tags">
+              <span class="menu-item-tag">Chef Choice</span>
+              <span class="menu-item-tag">Luxury</span>
+            </div>
+          </div>
+
+          <!-- Item 4: Main -->
+          <div class="menu-item glass-card" data-category="main">
+            <div class="menu-item-header">
+              <span class="menu-item-title">Pan-Seared Glacier Toothfish</span>
+              <span class="menu-item-line"></span>
+              <span class="menu-item-price">฿2,200</span>
+            </div>
+            <p class="menu-item-desc">ปลาหิมะขั้วโลกใต้เจี๋ยนกระทะเนื้อนุ่ม ชุ่มฉ่ำ เสิร์ฟพร้อมซอสครีมแซฟฟรอนสีทองเข้มข้น และหน่อไม้ฝรั่งอ่อน</p>
+            <div class="menu-item-tags">
+              <span class="menu-item-tag">Seafood</span>
+            </div>
+          </div>
+
+          <!-- Item 5: Dessert -->
+          <div class="menu-item glass-card" data-category="dessert">
+            <div class="menu-item-header">
+              <span class="menu-item-title">Golden Sphere Chocolate Dome</span>
+              <span class="menu-item-line"></span>
+              <span class="menu-item-price">฿950</span>
+            </div>
+            <p class="menu-item-desc">ช็อกโกแลตโดมทองคำพรีเมียม ราดด้วยคาราเมลร้อนให้โดมละลาย เผยให้เห็นไอศกรีมวานิลลามาดากัสการ์ด้านใน</p>
+            <div class="menu-item-tags">
+              <span class="menu-item-tag">Sweet Gold</span>
+            </div>
+          </div>
+
+          <!-- Item 6: Dessert -->
+          <div class="menu-item glass-card" data-category="dessert">
+            <div class="menu-item-header">
+              <span class="menu-item-title">Saffron Panna Cotta</span>
+              <span class="menu-item-line"></span>
+              <span class="menu-item-price">฿750</span>
+            </div>
+            <p class="menu-item-desc">พานาคอตต้านมกลิ่นหอมแซฟฟรอน เสิร์ฟคู่กับเยลลี่แชมเปญสีทองสว่างสดใส ตกแต่งด้วยผลเบอร์รี่สด</p>
+            <div class="menu-item-tags">
+              <span class="menu-item-tag">Exotic</span>
+            </div>
+          </div>
+
+          <!-- Item 7: Drink -->
+          <div class="menu-item glass-card" data-category="drink">
+            <div class="menu-item-header">
+              <span class="menu-item-title">Royal Golden Nectar</span>
+              <span class="menu-item-line"></span>
+              <span class="menu-item-price">฿650</span>
+            </div>
+            <p class="menu-item-desc">เครื่องดื่มม็อกเทลสูตรลับ ผสมผสานน้ำแอปเปิ้ลฟูจิ ไซรัปน้ำผึ้งป่า และเกล็ดทองคำบริสุทธิ์ที่ลอยประกายอย่างงดงาม</p>
+            <div class="menu-item-tags">
+              <span class="menu-item-tag">Non-Alcoholic</span>
+            </div>
+          </div>
+
+          <!-- Item 8: Drink -->
+          <div class="menu-item glass-card" data-category="drink">
+            <div class="menu-item-header">
+              <span class="menu-item-title">Vintaged Aurelia Gold Fizz</span>
+              <span class="menu-item-line"></span>
+              <span class="menu-item-price">฿1,150</span>
+            </div>
+            <p class="menu-item-desc">แชมเปญพรีเมียมคลาสสิก ผสมผสานสุราฝรั่งเศสกลิ่นส้มและทองคำคำเหลวสำหรับบริโภค มอบสัมผัสที่ซ่าและสดชื่น</p>
+            <div class="menu-item-tags">
+              <span class="menu-item-tag">Alcoholic</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section class="reservation id-reveal" id="reservation">
+      <div class="section-title reveal">
+        <h2 class="gold-text">สำรองโต๊ะอาหาร</h2>
+        <p style="color: var(--text-muted); font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase;">Book Your Experience</p>
+      </div>
+
+      <div class="reservation-container reveal">
+        <div class="reservation-info">
+          <h3 class="gold-text">ข้อมูลและการต้อนรับ</h3>
+          <p>กรุณาสำรองโต๊ะล่วงหน้าอย่างน้อย 24 ชั่วโมง เพื่อให้เราสามารถจัดเตรียมสิ่งที่ดีที่สุดสำหรับมื้ออาหารอันแสนพิเศษของคุณ</p>
+          
+          <div class="contact-details">
+            <div class="contact-detail-item">
+              <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="contact-text">
+                <h4>เบอร์โทรศัพท์</h4>
+                <p>+66 (0) 2 123 4567</p>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="contact-text">
+                <h4>อีเมล</h4>
+                <p>reservation@aureliadining.com</p>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="contact-text">
+                <h4>สถานที่ตั้ง</h4>
+                <p>ชั้น 55 อาคารโกลเด้นทาวเวอร์, ถนนสุขุมวิท, กรุงเทพฯ 10110</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reservation-form-wrapper">
+          <h3 class="gold-text">ฟอร์มการจองโต๊ะ</h3>
+          
+          <!-- Booking Success State (Initially Hidden) -->
+          <div class="booking-success" id="booking-success">
+            <div class="success-icon"><i class="fa-regular fa-circle-check"></i></div>
+            <h4 class="gold-text">การส่งข้อมูลจองโต๊ะสำเร็จ!</h4>
+            <p>ระบบได้รับข้อมูลการจองของคุณแล้ว เจ้าหน้าที่ของเราจะส่งอีเมลยืนยันการจองอย่างเป็นทางการให้คุณภายใน 1 ชั่วโมง</p>
+            <button class="gold-btn" id="reset-booking-btn">จองโต๊ะเพิ่มเติม</button>
+          </div>
+
+          <!-- Actual Form -->
+          <form class="res-form" id="res-form">
+            <div class="form-group">
+              <label for="name">ชื่อผู้จอง</label>
+              <input type="text" id="name" class="form-control" placeholder="กรุณาระบุชื่อ-นามสกุล" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">เบอร์ติดต่อ</label>
+              <input type="tel" id="phone" class="form-control" placeholder="08X-XXX-XXXX" required>
+            </div>
+            <div class="form-group">
+              <label for="email">อีเมล</label>
+              <input type="email" id="email" class="form-control" placeholder="example@mail.com" required>
+            </div>
+            <div class="form-group">
+              <label for="guests">จำนวนท่าน</label>
+              <select id="guests" class="form-control" required>
+                <option value="" disabled selected>เลือกจำนวนท่าน</option>
+                <option value="1">1 ท่าน</option>
+                <option value="2">2 ท่าน</option>
+                <option value="3">3 ท่าน</option>
+                <option value="4">4 ท่าน</option>
+                <option value="5">5 ท่าน</option>
+                <option value="6">6 ท่านขึ้นไป (ห้อง VIP)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="date">วันที่ต้องการจอง</label>
+              <input type="date" id="date" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="time">เวลาที่ต้องการ</label>
+              <select id="time" class="form-control" required>
+                <option value="" disabled selected>เลือกเวลา</option>
+                <option value="17:00">17:00 น.</option>
+                <option value="18:00">18:00 น.</option>
+                <option value="19:00">19:00 น.</option>
+                <option value="20:00">20:00 น.</option>
+                <option value="21:00">21:00 น.</option>
+                <option value="22:00">22:00 น.</option>
+              </select>
+            </div>
+            <div class="form-group res-form-full">
+              <label for="requests">ความต้องการเพิ่มเติม</label>
+              <textarea id="requests" class="form-control" rows="4" placeholder="ระบุความต้องการพิเศษ เช่น ครบรอบวันแต่งงาน, แพ้อาหารชนิดใด..."></textarea>
+            </div>
+            <button type="submit" class="gold-btn">ยืนยันการสำรองโต๊ะ</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer" id="contact">
+    <div class="footer-container">
+      <div class="footer-logo-side">
+        <h3 class="gold-text">AURELIA<span>.</span></h3>
+        <p>AURELIA มอบประสบการณ์การรับประทานอาหารที่ยอดเยี่ยมที่สุดให้กับทุกท่าน เราทุ่มเทรังสรรค์รสชาติระดับสากลและบรรยากาศอันล้ำค่าเพื่อช่วงเวลาสำคัญของคุณ</p>
+        <div class="social-icons">
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Line"><i class="fa-brands fa-line"></i></a>
+          <a href="#" class="social-link" aria-label="Tripadvisor"><i class="fa-brands fa-tripadvisor"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>ลิงก์ด่วน</h4>
+        <ul>
+          <li><a href="#home">หน้าแรก</a></li>
+          <li><a href="#about">เกี่ยวกับเรา</a></li>
+          <li><a href="#menu">เมนูแนะนำ</a></li>
+          <li><a href="#reservation">จองโต๊ะอาหาร</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-hours">
+        <h4>เวลาทำการ</h4>
+        <div class="hours-grid">
+          <span class="hours-day">วันจันทร์ - วันศุกร์</span>
+          <span class="hours-time">17:00 - 23:00 น.</span>
+          <span class="hours-day">วันเสาร์ - วันอาทิตย์</span>
+          <span class="hours-time">16:30 - 00:00 น.</span>
+          <span class="hours-day">ห้องครัวปิดรับออเดอร์</span>
+          <span class="hours-time">22:30 น.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 AURELIA Fine Dining Restaurant. All Rights Reserved.</p>
+      <p>Designed with Luxury Black & Gold Theme</p>
+    </div>
+  </footer>
+
+  <!-- Script JS -->
+  <script src="app.js"></script>
+</body>
 </html>
